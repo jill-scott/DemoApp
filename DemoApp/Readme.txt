@@ -49,4 +49,8 @@ Starting a project
 5. In Github, go to Clone or download and copy the provided url using SSH key and passphrase.
 6. In Tower, open local repo and go to Repository -> Add new remote repository. Paste the URL to connect project to remote.
 7. Pull master, then branch off and publish any local changes.
+Note: Sometimes Git doesn't recognize gitignore changes right away. Run these lines through the terminal (stash changes you want to keep first):
+git rm -r --cached .
+git add .
+git commit -m "fixed untracked files"
 
