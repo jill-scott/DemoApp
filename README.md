@@ -35,12 +35,12 @@ CocoaPods is used to install and manage dependencies in existing Xcode projects.
   #ignore all warnings from all pods
   inhibit_all_warnings!
   
-  target "DemoApp" do
-  #Pods for DemoApp
-  pod 'PromiseKit'
-  pod 'Kingfisher'
-  pod 'RxSwift'
-  end
+  target "DemoApp" do  
+  #Pods for DemoApp  
+  pod 'PromiseKit'  
+  pod 'Kingfisher'  
+  pod 'RxSwift'  
+  end  
 
 4. Save the file.
  
