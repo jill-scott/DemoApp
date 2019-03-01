@@ -132,6 +132,18 @@ You should only commit code when it’s completed. This doesn’t mean you have 
 4. Create pull request for that branch
 5. Delete old branch if necessary
 
+## Merging into Master
+
+1. Save stash with changes
+2. Pull latest code from master
+3. Apply stash and resolve any conflicts or rebase as needed
+4. Check your xcode build warnings. The project should have none! This includes linter warnings, which can be helpful for finding mistakes that could turn into bugs before they happen.
+5. Do your due diligence; check your new feature by running on a real iPhone
+6. Make a pull request on github
+7. Get one of your teammates to review your code for the feature and approve your PR.
+8. Squash and merge to master
+9. Delete old branch from repo
+
 # Localization
 
 ## Localization Update Script
