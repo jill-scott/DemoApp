@@ -1,0 +1,26 @@
+# Uncomment the next line to define a global platform for your project
+platform :ios, '10.0'
+use_frameworks!
+
+def shared_pods
+  pod 'PromiseKit'
+  pod 'Kingfisher'
+  pod 'RxSwift'
+  pod 'RxCocoa'
+end
+
+target 'DemoApp' do
+  shared_pods
+end
+
+target 'DemoApp_iOS' do
+  shared_pods
+end
+
+target 'DemoAppKit' do
+  shared_pods
+end
+
+target 'DemoAppUIKit' do
+  shared_pods
+end
