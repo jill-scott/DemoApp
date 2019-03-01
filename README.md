@@ -207,9 +207,9 @@ default:\
 return nil\
 }\
 }\
-}\
+}
 
-## Programatic
+## Programmatic
 
 1. Identify user-facing strings in the swift file.
 2. If the string is not already in the “Text Strings - iAqualink” sheet, add it to the sheet. Give the string a unique key.
