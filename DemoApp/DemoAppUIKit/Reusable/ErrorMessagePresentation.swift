@@ -7,7 +7,7 @@
 //
 
 import Foundation
-import KooberKit
+import DemoAppKit
 
 extension UIViewController {
     
