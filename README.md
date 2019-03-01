@@ -43,7 +43,7 @@ CocoaPods is used to install and manage dependencies in existing Xcode projects.
 
 4. Save the file.
  
-5. Run the pod install command. This will install the SDKs specified in the Podspec, along with any dependencies they may have.\  $ pod update
+5. Run the pod install command. This will install the SDKs specified in the Podspec, along with any dependencies they may have.  $ pod update
   
 6. Open your app's .xcworkspace file to launch Xcode. Use this file for all development on your app
   
@@ -51,6 +51,31 @@ CocoaPods is used to install and manage dependencies in existing Xcode projects.
   Note: I was having issues with a framework not recognizing a pod. A pod repo update fixed the issue.\
   Note: Another problem I encountered was targets overriding Framework Search Paths and Heading Search Paths. All targets should have $(inherited) for these settings; Framework should also have $(PROJECT_DIR)
   
+## Signing Certs and Bitrise - May need revisiting
+
+Signing Certificates:
+
+There are a few places we need to tinker with to get our app ready for distribution. Assuming we are using bitrise for deployment, these are:
+
+- Keychain access
+- Xcode
+- Apple developer accounts
+- Bitrise
+- and indirectly, Github
+
+A developer provisioning profile with a matching signing certificate should be enough for a bitrise build, but if we want to use bitrise.io for deployment, we need to use a distribution profile and cert.
+
+On developer.apple.com, access account, and certificates. If we do not already have a distribution cert, create one for use in our app. Now move to Provisioning profiles section. Create a new provisioning profile for in house distribution. It should use our enterprise account and the distribution cert we just created (or that we already have). Download both the cert and the provisioning profile.
+
+In xcode, go to preferences to manage our accounts. Add the necessary accounts and certs for development and distribution.
+
+Downloaded certs should be accessible in the keychain, and available for export. When you export the certificate, leave the password blank. This will let the bitrise build work as intended. Return to bitrise and in workflow -> code signing, upload the provisioning profile you downloaded and the matching cert you exported.
+
+For any builds to work, let alone deployment, your bitrise account must be connected to your project. Avoid linking the two through SSH keys in a personal github account. Rather, an admin on the github repo should add the SSH key to the repo settings.
+
+Kicking off a build with a Pull Request:
+
+To trigger a build in bitrise on a PR, go to Bitrise code and add a new github webhook. A github project admin will need to add this to the settings of the repo, and select “push” and “pull request” in the events. In the workflow -> triggers, add the repo events you want to trigger a build
   
 # GitHub
   
@@ -178,3 +203,14 @@ return nil\
 2. If the string is not already in the “Text Strings - iAqualink” sheet, add it to the sheet. Give the string a unique key.
 3. If the String is a String literal without any read-in values, replace the string in the code with NSLocalizedString(“[key for string]”, comment: “”).
 4. If instead the string includes any values, use string specifiers, for example, String(format: NSLocalizedString(“[key for string]”, comment: “”), [variable]). The string in the Google sheet should correspondingly read, “[Desired string] %s”.
+
+## Accessibility
+
+For storyboard text:
+
+- Font should be one of the stylized fonts, e.g., Subhead or Body
+- Lines should be 0
+- Automatically Adjusts Font should be checked
+- Line break should be word wrap
+- If content is in code, it should be wrapped with AppStr
+- If content is in storyboard, user runtime attribute should be added
