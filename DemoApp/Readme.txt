@@ -43,7 +43,10 @@ Starting a project
 
 1. Create a new repo in github. In the Create a new repository page, check the box to initialize with a readme and select "Swift" in "Add .gitignore". Update the readme for a first commit.
 2. Clone the project to your local machine. The steps that follow detail this process using Tower, the source control GUI.
-3. In Github, go to Clone or download and copy the provided url using SSH key and passphrase.
-4. In terminal, cd to the directory where your project is located and do a git init
-5. Drag the project folder to tower
-6. 
+
+3. In terminal, cd to the directory where your project is located and do a git init
+4. Drag the project folder to tower
+5. In Github, go to Clone or download and copy the provided url using SSH key and passphrase.
+6. In Tower, open local repo and go to Repository -> Add new remote repository. Paste the URL to connect project to remote.
+7. Pull master, then branch off and publish any local changes.
+
