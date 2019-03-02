@@ -14,6 +14,45 @@
 3. pod install
 4. open DemoApp.xcworkspace
   
+  # Dependency Managers
+  
+  When it comes to dependency managers, CocoaPods is the most widely used for library distribution. Carthage, however, is much simpler and does not need to rebuild every time. It also does not change project settings. We should use Carthage wherever possible, as CocoaPods tends to cause more merge conflicts and untraceable issues. Carthage takes a long time to install schemes initially, but saves time building in the long run.
+  
+  Note on using custom frameworks in addition to imported libraries: The library projects themselves must be referenced in the project files. Otherwise they are not built correctly. All dependencies must be established in the build phases for each target. The library projects should be included in the Target Dependencies for the primary app target. Otherwise NOTHING WILL BE FOUND AT RUNTIME. This was a big timesuck to figure out, and is not immediately intuitive. Also make sure to embed frameworks, including the libraries and custom framework targets as needed. See the demo app build phases and library folder for an example of how this is structured.
+  
+  # Carthage
+  
+  1. From the Carthage Documentation: https://github.com/Carthage/Carthage
+  
+  2. Get Carthage by running brew install carthage or choose another installation method
+  
+  3. Create a Cartfile in the same directory where your .xcodeproj or .xcworkspace is
+  
+  4. List the desired dependencies in the Cartfile, for example:
+  
+  github "Alamofire/Alamofire" ~> 4.7.2
+  
+  5. Run carthage update
+  
+  6. A Cartfile.resolved file and a Carthage directory will appear in the same directory where your .xcodeproj or .xcworkspace is
+  
+  7. Drag the built .framework binaries from Carthage/Build/<platform> into your application’s Xcode project.
+  
+  8. If you are using Carthage for an application, follow the remaining steps, otherwise stop here.
+  
+  9. On your application targets’ Build Phases settings tab, click the + icon and choose New Run Script Phase. Create a Run Script in which you specify your shell (ex: /bin/sh), add the following contents to the script area below the shell:
+  
+  /usr/local/bin/carthage copy-frameworks
+  
+  10. Add the paths to the frameworks you want to use under “Input Files". For example:
+  
+  $(SRCROOT)/Carthage/Build/iOS/Alamofire.framework
+  
+  11. Add the paths to the copied frameworks to the “Output Files”. For example:
+  
+  $(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Alamofire.framework
+  
+  12. For an in depth guide, read on from Adding frameworks to an application
   
 # CocoaPods
   
