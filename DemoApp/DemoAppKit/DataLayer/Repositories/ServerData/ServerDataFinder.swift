@@ -1,5 +1,5 @@
 //
-//  FinishedLoadingResponder.swift
+//  ServerDataFinder.swift
 //  DemoAppKit
 //
 //  Created by Jill Scott on 3/4/19.
@@ -7,8 +7,9 @@
 //
 
 import Foundation
+import PromiseKit
 
-public protocol FinishedLoadingResponder {
+public protocol ServerDataFinder {
     
-    func finishedLoading(with data: ServerData)
+    func getServerData() -> Promise<ServerData>
 }

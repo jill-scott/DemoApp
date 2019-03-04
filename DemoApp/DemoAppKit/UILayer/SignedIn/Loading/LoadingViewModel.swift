@@ -13,13 +13,13 @@ public class LoadingViewModel {
     
     // MARK: - Properties
     let finishedLoadingResponder: FinishedLoadingResponder
-    //let locator: Locator
+    let serverDataFinder: ServerDataFinder
     
     // MARK: - Methods
-    public init(finishedLoadingResponder: FinishedLoadingResponder) {
+    public init(finishedLoadingResponder: FinishedLoadingResponder, serverDataFinder: ServerDataFinder) {
                // , locator: Locator) {
         self.finishedLoadingResponder = finishedLoadingResponder
-        //self.locator = locator
+        self.serverDataFinder = serverDataFinder
     }
     
     public var errorMessages: Observable<ErrorMessage> {
@@ -27,18 +27,14 @@ public class LoadingViewModel {
     }
     private let errorMessagesSubject = PublishSubject<ErrorMessage>()
     
-//    public func getUsersCurrentLocation() {
-//        locator
-//            .getUsersCurrentLocation()
-//            .done(determinedPickupLocationResponder.pickUpUser(at:))
-//            .catch { error in
-//                let errorMessage = ErrorMessage(title: "Error Getting Location",
-//                                                message: "Could not get your location. Please check location settings and try again.")
-//                self.errorMessagesSubject.onNext(errorMessage)
-//        }
-//    }
-    
-    public func finishedLoading() {
-        finishedLoadingResponder.finishedLoading()
+    public func getServerData() {
+        serverDataFinder
+            .getServerData()
+            .done(finishedLoadingResponder.finishedLoading(with:))
+            .catch { error in
+                let errorMessage = ErrorMessage(title: "Error Getting Location",
+                                                message: "Could not get your location. Please check location settings and try again.")
+                self.errorMessagesSubject.onNext(errorMessage)
+        }
     }
 }

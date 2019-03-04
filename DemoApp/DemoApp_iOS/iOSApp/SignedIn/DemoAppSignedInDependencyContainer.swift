@@ -27,7 +27,7 @@ public class DemoAppSignedInDependencyContainer {
     // Long-lived dependencies
     let signedInViewModel: SignedInViewModel
     //let imageCache: ImageCache
-    //let locator: Locator
+    let serverDataFinder: ServerDataFinder
     
     // MARK: - Methods
     public init(userSession: UserSession, appDependencyContainer: DemoAppDependencyContainer) {
@@ -37,9 +37,10 @@ public class DemoAppSignedInDependencyContainer {
 //        func makeImageCache() -> ImageCache {
 //            return InBundleImageCache()
 //        }
-//        func makeLocator() -> Locator {
-//            return FakeLocator()
-//        }
+        
+        func makeServerDataFinder() -> ServerDataFinder {
+            return FakeServerDataFinder()
+        }
         
         self.userSessionRepository = appDependencyContainer.sharedUserSessionRepository
         self.mainViewModel = appDependencyContainer.sharedMainViewModel
@@ -48,7 +49,7 @@ public class DemoAppSignedInDependencyContainer {
         
         self.signedInViewModel = makeSignedInViewModel()
         //self.imageCache = makeImageCache()
-        //self.locator = makeLocator()
+        self.serverDataFinder = makeServerDataFinder()
     }
     
     // Signed in
@@ -86,7 +87,7 @@ public class DemoAppSignedInDependencyContainer {
     }
     
     public func makeLoadingViewModel() -> LoadingViewModel {
-        return LoadingViewModel(finishedLoadingResponder: signedInViewModel)
+        return LoadingViewModel(finishedLoadingResponder: signedInViewModel, serverDataFinder: serverDataFinder)
     }
     
     // Dashboard

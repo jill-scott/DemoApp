@@ -16,7 +16,7 @@ public class LoadingRootView: NiblessView {
     let viewModel: LoadingViewModel
     
     let appLogoImageView: UIImageView = {
-        let imageView = UIImageView(image: #imageLiteral(resourceName: "thumbs-up"))
+        let imageView = UIImageView(image: #imageLiteral(resourceName: "thumbs-up-1327029_1920"))
         imageView.backgroundColor = Color.background
         return imageView
     }()
@@ -35,7 +35,7 @@ public class LoadingRootView: NiblessView {
         self.viewModel = viewModel
         super.init(frame: frame)
         
-        viewModel.finishedLoading()
+        viewModel.getServerData()
     }
     
     public override func didMoveToWindow() {

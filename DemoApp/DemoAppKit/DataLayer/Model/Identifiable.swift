@@ -1,5 +1,5 @@
 //
-//  FinishedLoadingResponder.swift
+//  Identifiable.swift
 //  DemoAppKit
 //
 //  Created by Jill Scott on 3/4/19.
@@ -8,7 +8,7 @@
 
 import Foundation
 
-public protocol FinishedLoadingResponder {
+protocol Identifiable {
     
-    func finishedLoading(with data: ServerData)
+    var id: String { get }
 }

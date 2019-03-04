@@ -41,6 +41,10 @@
 		8C592C05222D9FE7004887F9 /* FinishedLoadingResponder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C592C04222D9FE7004887F9 /* FinishedLoadingResponder.swift */; };
 		8C592C08222DA233004887F9 /* DashboardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C592C07222DA233004887F9 /* DashboardViewModel.swift */; };
 		8C592C0A222DA240004887F9 /* DashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C592C09222DA240004887F9 /* DashboardView.swift */; };
+		8C592C12222DBC25004887F9 /* ServerDataFinder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C592C11222DBC25004887F9 /* ServerDataFinder.swift */; };
+		8C592C27222DBC78004887F9 /* ServerData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C592C26222DBC78004887F9 /* ServerData.swift */; };
+		8C592C2A222DBD27004887F9 /* Identifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C592C29222DBD27004887F9 /* Identifiable.swift */; };
+		8C592C2D222DC280004887F9 /* FakeServerDataFinder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C592C2C222DC280004887F9 /* FakeServerDataFinder.swift */; };
 		8C7EB214222474230033293F /* UserSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C7EB213222474230033293F /* UserSession.swift */; };
 		8C7EB216222474AF0033293F /* UserProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C7EB215222474AF0033293F /* UserProfile.swift */; };
 		8C7EB218222475690033293F /* RemoteUserSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C7EB217222475690033293F /* RemoteUserSession.swift */; };
@@ -378,6 +382,10 @@
 		8C592C04222D9FE7004887F9 /* FinishedLoadingResponder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinishedLoadingResponder.swift; sourceTree = "<group>"; };
 		8C592C07222DA233004887F9 /* DashboardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewModel.swift; sourceTree = "<group>"; };
 		8C592C09222DA240004887F9 /* DashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardView.swift; sourceTree = "<group>"; };
+		8C592C11222DBC25004887F9 /* ServerDataFinder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ServerDataFinder.swift; path = DemoAppKit/DataLayer/Repositories/ServerData/ServerDataFinder.swift; sourceTree = SOURCE_ROOT; };
+		8C592C26222DBC78004887F9 /* ServerData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerData.swift; sourceTree = "<group>"; };
+		8C592C29222DBD27004887F9 /* Identifiable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Identifiable.swift; sourceTree = "<group>"; };
+		8C592C2C222DC280004887F9 /* FakeServerDataFinder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeServerDataFinder.swift; sourceTree = "<group>"; };
 		8C7EB213222474230033293F /* UserSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSession.swift; sourceTree = "<group>"; };
 		8C7EB215222474AF0033293F /* UserProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfile.swift; sourceTree = "<group>"; };
 		8C7EB217222475690033293F /* RemoteUserSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteUserSession.swift; sourceTree = "<group>"; };
@@ -626,6 +634,33 @@
 			path = Dashboard;
 			sourceTree = "<group>";
 		};
+		8C592C28222DBC8A004887F9 /* ServerData */ = {
+			isa = PBXGroup;
+			children = (
+				8C592C2B222DC26D004887F9 /* Implementations */,
+				8C592C11222DBC25004887F9 /* ServerDataFinder.swift */,
+			);
+			path = ServerData;
+			sourceTree = "<group>";
+		};
+		8C592C2B222DC26D004887F9 /* Implementations */ = {
+			isa = PBXGroup;
+			children = (
+				8C592C2C222DC280004887F9 /* FakeServerDataFinder.swift */,
+			);
+			path = Implementations;
+			sourceTree = "<group>";
+		};
+		8C592C2E222DC624004887F9 /* Libraries */ = {
+			isa = PBXGroup;
+			children = (
+				8C592BC5222A0D3C004887F9 /* Rx.xcodeproj */,
+				8C592BB0222A0D1D004887F9 /* PromiseKit.xcodeproj */,
+				8C592B98222A0CEF004887F9 /* Kingfisher.xcodeproj */,
+			);
+			name = Libraries;
+			sourceTree = "<group>";
+		};
 		8C7EB212222473F90033293F /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -637,6 +672,8 @@
 				8CD9B31F2225C9F3001BE735 /* ErrorPresentation.swift */,
 				8CD9B3462225DE8C001BE735 /* DemoAppKitError.swift */,
 				8CD9B3482225DF7E001BE735 /* FakeURL.swift */,
+				8C592C26222DBC78004887F9 /* ServerData.swift */,
+				8C592C29222DBD27004887F9 /* Identifiable.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -659,8 +696,8 @@
 				8C8670FD22208F780077BB91 /* DemoAppUIKit */,
 				8C86711F22208FAF0077BB91 /* DemoAppKit */,
 				8C8670A422208ECC0077BB91 /* Products */,
+				8C592C2E222DC624004887F9 /* Libraries */,
 				8C05B5AE2229F56400CEA18E /* Frameworks */,
-				8C592B75222A08C7004887F9 /* Libraries */,
 			);
 			sourceTree = "<group>";
 		};
@@ -702,7 +739,6 @@
 				8C86712122208FAF0077BB91 /* Info.plist */,
 				8C8671452221EC050077BB91 /* UILayer */,
 				8C8671462221EC130077BB91 /* DataLayer */,
-				8C8671472221EC2E0077BB91 /* Reusable */,
 			);
 			path = DemoAppKit;
 			sourceTree = "<group>";
@@ -839,13 +875,6 @@
 			path = DataLayer;
 			sourceTree = "<group>";
 		};
-		8C8671472221EC2E0077BB91 /* Reusable */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Reusable;
-			sourceTree = "<group>";
-		};
 		8C8671482221EC4D0077BB91 /* Onboarding */ = {
 			isa = PBXGroup;
 			children = (
@@ -908,11 +937,11 @@
 		8C86715022246ACD0077BB91 /* Repositories */ = {
 			isa = PBXGroup;
 			children = (
+				8C592C28222DBC8A004887F9 /* ServerData */,
 				8C86715622246B2C0077BB91 /* UserSessionRepository.swift */,
 				8CD9B33C2225DA8C001BE735 /* DemoAppUserSessionRepository.swift */,
 				8C86715222246ADF0077BB91 /* Persistence */,
 				8C86715322246AEE0077BB91 /* Remote */,
-				8C86715422246AF90077BB91 /* Location */,
 				8C86715522246B040077BB91 /* Coding */,
 			);
 			path = Repositories;
@@ -933,13 +962,6 @@
 				8CD9B33E2225DC40001BE735 /* Auth */,
 			);
 			path = Remote;
-			sourceTree = "<group>";
-		};
-		8C86715422246AF90077BB91 /* Location */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Location;
 			sourceTree = "<group>";
 		};
 		8C86715522246B040077BB91 /* Coding */ = {
@@ -1495,6 +1517,7 @@
 				8C9D89D02227341D00A6A0EC /* GoToSignInNavigator.swift in Sources */,
 				8C86715722246B2C0077BB91 /* UserSessionRepository.swift in Sources */,
 				8CD9B3182224AF03001BE735 /* SignedInResponder.swift in Sources */,
+				8C592C12222DBC25004887F9 /* ServerDataFinder.swift in Sources */,
 				8CD9B31522249D1A001BE735 /* MainView.swift in Sources */,
 				8C9D89CC2227340400A6A0EC /* OnboardingView.swift in Sources */,
 				8CD9B3432225DD2C001BE735 /* UserSessionPropertyListCoder.swift in Sources */,
@@ -1506,6 +1529,7 @@
 				8C7EB218222475690033293F /* RemoteUserSession.swift in Sources */,
 				8CD9B3392225D4D9001BE735 /* KeychainItem.swift in Sources */,
 				8CD3269D2226120000D10F18 /* SignedInViewModel.swift in Sources */,
+				8C592C2A222DBD27004887F9 /* Identifiable.swift in Sources */,
 				8CD9B3492225DF7E001BE735 /* FakeURL.swift in Sources */,
 				8CD9B33D2225DA8C001BE735 /* DemoAppUserSessionRepository.swift in Sources */,
 				8CD9B31A2224AF52001BE735 /* NotSignedInResponder.swift in Sources */,
@@ -1521,6 +1545,7 @@
 				8CD9B30F2224999F001BE735 /* NewAccount.swift in Sources */,
 				8CD9B3562225ECBC001BE735 /* DoneWithProfileResponder.swift in Sources */,
 				8C9D89D42227396F00A6A0EC /* SignInViewModel.swift in Sources */,
+				8C592C27222DBC78004887F9 /* ServerData.swift in Sources */,
 				8C7EB214222474230033293F /* UserSession.swift in Sources */,
 				8C592C05222D9FE7004887F9 /* FinishedLoadingResponder.swift in Sources */,
 				8C7EB21B222476330033293F /* UserSessionDataStore.swift in Sources */,
@@ -1530,6 +1555,7 @@
 				8CD9B3452225DE33001BE735 /* FakeAuthRemoteAPI.swift in Sources */,
 				8C592C03222D9F54004887F9 /* LoadingViewModel.swift in Sources */,
 				8C592C08222DA233004887F9 /* DashboardViewModel.swift in Sources */,
+				8C592C2D222DC280004887F9 /* FakeServerDataFinder.swift in Sources */,
 				8CD9B3402225DC6D001BE735 /* AuthRemoteAPI.swift in Sources */,
 				8CD9B31C2225C6CF001BE735 /* LaunchViewModel.swift in Sources */,
 			);

@@ -45,7 +45,7 @@ public class SignedInViewModel: DoneWithProfileResponder, FinishedLoadingRespond
         showingProfileScreenSubject.onNext(false)
     }
     
-    public func finishedLoading() {
+    public func finishedLoading(with serverData: ServerData) {
         viewSubject.onNext(.dashboard)
     }
 }
