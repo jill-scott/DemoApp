@@ -79,6 +79,23 @@ public class DemoAppSignedInDependencyContainer {
 //                                             locator: locator)
 //    }
     
+    //Loading
+    
+    public func makeLoadingViewController() -> LoadingViewController {
+        return LoadingViewController(viewModelFactory: self)
+    }
+    
+    public func makeLoadingViewModel() -> LoadingViewModel {
+        return LoadingViewModel(finishedLoadingResponder: signedInViewModel)
+    }
+    
+    // Dashboard
+    
+    public func makeDashboardViewController() -> DashboardViewController {
+        let dashboardDependencyContainer = DemoAppDashboardDependencyContainer(signedInDependencyContainer: self)
+        return dashboardDependencyContainer.makeDashboardViewController()
+    }
+    
 //    // Pick-me-up
 //    public func makePickMeUpViewController(pickupLocation: Location) -> PickMeUpViewController {
 //        let pickMeUpDependencyContainer = KooberPickMeUpDependencyContainer(signedInDependencyContainer: self,
@@ -115,5 +132,8 @@ public class DemoAppSignedInDependencyContainer {
 }
 
 extension DemoAppSignedInDependencyContainer: SignedInViewControllerFactory {}
+
+extension DemoAppSignedInDependencyContainer: LoadingViewModelFactory {}
+//, DashboardViewModelFactory {}
 
 //extension DemoAppSignedInDependencyContainer: GettingUsersLocationViewModelFactory, WaitingForPickupViewModelFactory {}

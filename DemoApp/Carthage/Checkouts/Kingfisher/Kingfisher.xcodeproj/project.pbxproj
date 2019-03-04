@@ -1221,7 +1221,7 @@
 					};
 					D1ED2D341AD2D09F00CFC3EB = {
 						CreatedOnToolsVersion = 6.2;
-						LastSwiftMigration = 0900;
+						LastSwiftMigration = 1010;
 					};
 					D1ED2D3E1AD2D09F00CFC3EB = {
 						CreatedOnToolsVersion = 6.2;

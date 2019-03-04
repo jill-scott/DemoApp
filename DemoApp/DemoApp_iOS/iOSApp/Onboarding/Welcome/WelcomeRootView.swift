@@ -17,7 +17,7 @@ public class WelcomeRootView: NiblessView {
     var hierarchyNotReady = true
     
     let appLogoImageView: UIImageView = {
-        let imageView = UIImageView(image: UIImage(named: "roo_logo"))
+        let imageView = UIImageView(image: #imageLiteral(resourceName: "thumbs-up") )
         imageView.backgroundColor = Color.background
         return imageView
     }()

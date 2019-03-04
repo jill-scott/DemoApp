@@ -10,43 +10,37 @@
 		8C05B5B62229F56500CEA18E /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C05B5AF2229F56400CEA18E /* RxCocoa.framework */; };
 		8C05B5B72229F56500CEA18E /* PromiseKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C05B5B02229F56400CEA18E /* PromiseKit.framework */; };
 		8C05B5B82229F56500CEA18E /* Kingfisher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C05B5B12229F56400CEA18E /* Kingfisher.framework */; };
-		8C05B5B92229F56500CEA18E /* RxTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C05B5B22229F56400CEA18E /* RxTest.framework */; };
 		8C05B5BA2229F56500CEA18E /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C05B5B32229F56500CEA18E /* RxSwift.framework */; };
-		8C05B5BB2229F56500CEA18E /* RxAtomic.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C05B5B42229F56500CEA18E /* RxAtomic.framework */; };
-		8C05B5BC2229F56500CEA18E /* RxBlocking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C05B5B52229F56500CEA18E /* RxBlocking.framework */; };
 		8C05B5BD2229F58400CEA18E /* Kingfisher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C05B5B12229F56400CEA18E /* Kingfisher.framework */; };
 		8C05B5BE2229F58400CEA18E /* PromiseKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C05B5B02229F56400CEA18E /* PromiseKit.framework */; };
-		8C05B5BF2229F58400CEA18E /* RxAtomic.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C05B5B42229F56500CEA18E /* RxAtomic.framework */; };
-		8C05B5C02229F58400CEA18E /* RxBlocking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C05B5B52229F56500CEA18E /* RxBlocking.framework */; };
 		8C05B5C12229F58400CEA18E /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C05B5AF2229F56400CEA18E /* RxCocoa.framework */; };
 		8C05B5C22229F58400CEA18E /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C05B5B32229F56500CEA18E /* RxSwift.framework */; };
-		8C05B5C32229F58400CEA18E /* RxTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C05B5B22229F56400CEA18E /* RxTest.framework */; };
 		8C05B5C42229F58B00CEA18E /* Kingfisher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C05B5B12229F56400CEA18E /* Kingfisher.framework */; };
 		8C05B5C52229F58B00CEA18E /* PromiseKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C05B5B02229F56400CEA18E /* PromiseKit.framework */; };
-		8C05B5C62229F58B00CEA18E /* RxAtomic.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C05B5B42229F56500CEA18E /* RxAtomic.framework */; };
-		8C05B5C72229F58B00CEA18E /* RxBlocking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C05B5B52229F56500CEA18E /* RxBlocking.framework */; };
 		8C05B5C82229F58B00CEA18E /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C05B5AF2229F56400CEA18E /* RxCocoa.framework */; };
 		8C05B5C92229F58B00CEA18E /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C05B5B32229F56500CEA18E /* RxSwift.framework */; };
-		8C05B5CA2229F58B00CEA18E /* RxTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C05B5B22229F56400CEA18E /* RxTest.framework */; };
-		8C05B5CB2229F59000CEA18E /* Kingfisher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C05B5B12229F56400CEA18E /* Kingfisher.framework */; };
 		8C05B5CC2229F59000CEA18E /* PromiseKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C05B5B02229F56400CEA18E /* PromiseKit.framework */; };
-		8C05B5CD2229F59000CEA18E /* RxAtomic.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C05B5B42229F56500CEA18E /* RxAtomic.framework */; };
-		8C05B5CE2229F59000CEA18E /* RxBlocking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C05B5B52229F56500CEA18E /* RxBlocking.framework */; };
-		8C05B5CF2229F59000CEA18E /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C05B5AF2229F56400CEA18E /* RxCocoa.framework */; };
 		8C05B5D02229F59000CEA18E /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C05B5B32229F56500CEA18E /* RxSwift.framework */; };
-		8C05B5D12229F59000CEA18E /* RxTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C05B5B22229F56400CEA18E /* RxTest.framework */; };
 		8C592B66222A0687004887F9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8C592B61222A0687004887F9 /* Assets.xcassets */; };
 		8C592B68222A0687004887F9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C592B64222A0687004887F9 /* AppDelegate.swift */; };
 		8C592B6D222A0861004887F9 /* Kingfisher.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8C05B5B12229F56400CEA18E /* Kingfisher.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		8C592B6E222A0861004887F9 /* PromiseKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8C05B5B02229F56400CEA18E /* PromiseKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		8C592B6F222A0861004887F9 /* RxAtomic.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8C05B5B42229F56500CEA18E /* RxAtomic.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		8C592B70222A0861004887F9 /* RxBlocking.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8C05B5B52229F56500CEA18E /* RxBlocking.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		8C592B71222A0861004887F9 /* RxCocoa.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8C05B5AF2229F56400CEA18E /* RxCocoa.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		8C592B72222A0861004887F9 /* RxSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8C05B5B32229F56500CEA18E /* RxSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		8C592B73222A0861004887F9 /* RxTest.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8C05B5B22229F56400CEA18E /* RxTest.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		8C592B94222A08FC004887F9 /* DemoAppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C86711E22208FAF0077BB91 /* DemoAppKit.framework */; };
 		8C592B95222A08FC004887F9 /* DemoAppUIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C8670FC22208F780077BB91 /* DemoAppUIKit.framework */; };
 		8C592B97222A0903004887F9 /* DemoAppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C86711E22208FAF0077BB91 /* DemoAppKit.framework */; };
+		8C592BF0222D9CCE004887F9 /* CellIdentifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C592BEE222D9C40004887F9 /* CellIdentifier.swift */; };
+		8C592BF6222D9E4E004887F9 /* LoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C592BF5222D9E4E004887F9 /* LoadingViewController.swift */; };
+		8C592BF8222D9E59004887F9 /* LoadingRootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C592BF7222D9E59004887F9 /* LoadingRootView.swift */; };
+		8C592BFA222D9E73004887F9 /* DemoAppDashboardDependencyContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C592BF9222D9E73004887F9 /* DemoAppDashboardDependencyContainer.swift */; };
+		8C592BFC222D9E88004887F9 /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C592BFB222D9E88004887F9 /* DashboardViewController.swift */; };
+		8C592BFE222D9E91004887F9 /* DashboardUserInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C592BFD222D9E91004887F9 /* DashboardUserInterface.swift */; };
+		8C592C00222D9EA0004887F9 /* DashboardRootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C592BFF222D9EA0004887F9 /* DashboardRootView.swift */; };
+		8C592C03222D9F54004887F9 /* LoadingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C592C02222D9F54004887F9 /* LoadingViewModel.swift */; };
+		8C592C05222D9FE7004887F9 /* FinishedLoadingResponder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C592C04222D9FE7004887F9 /* FinishedLoadingResponder.swift */; };
+		8C592C08222DA233004887F9 /* DashboardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C592C07222DA233004887F9 /* DashboardViewModel.swift */; };
+		8C592C0A222DA240004887F9 /* DashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C592C09222DA240004887F9 /* DashboardView.swift */; };
 		8C7EB214222474230033293F /* UserSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C7EB213222474230033293F /* UserSession.swift */; };
 		8C7EB216222474AF0033293F /* UserProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C7EB215222474AF0033293F /* UserProfile.swift */; };
 		8C7EB218222475690033293F /* RemoteUserSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C7EB217222475690033293F /* RemoteUserSession.swift */; };
@@ -347,11 +341,8 @@
 			files = (
 				8C592B6D222A0861004887F9 /* Kingfisher.framework in Embed Frameworks */,
 				8C592B6E222A0861004887F9 /* PromiseKit.framework in Embed Frameworks */,
-				8C592B6F222A0861004887F9 /* RxAtomic.framework in Embed Frameworks */,
-				8C592B70222A0861004887F9 /* RxBlocking.framework in Embed Frameworks */,
 				8C592B71222A0861004887F9 /* RxCocoa.framework in Embed Frameworks */,
 				8C592B72222A0861004887F9 /* RxSwift.framework in Embed Frameworks */,
-				8C592B73222A0861004887F9 /* RxTest.framework in Embed Frameworks */,
 				8C86711222208F780077BB91 /* DemoAppUIKit.framework in Embed Frameworks */,
 				8C8670EF22208F1B0077BB91 /* DemoApp_iOS.framework in Embed Frameworks */,
 				8C86713422208FAF0077BB91 /* DemoAppKit.framework in Embed Frameworks */,
@@ -376,6 +367,17 @@
 		8C592B98222A0CEF004887F9 /* Kingfisher.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Kingfisher.xcodeproj; path = Carthage/Checkouts/Kingfisher/Kingfisher.xcodeproj; sourceTree = SOURCE_ROOT; };
 		8C592BB0222A0D1D004887F9 /* PromiseKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = PromiseKit.xcodeproj; path = Carthage/Checkouts/PromiseKit/PromiseKit.xcodeproj; sourceTree = SOURCE_ROOT; };
 		8C592BC5222A0D3C004887F9 /* Rx.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Rx.xcodeproj; path = Carthage/Checkouts/RxSwift/Rx.xcodeproj; sourceTree = SOURCE_ROOT; };
+		8C592BEE222D9C40004887F9 /* CellIdentifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellIdentifier.swift; sourceTree = "<group>"; };
+		8C592BF5222D9E4E004887F9 /* LoadingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingViewController.swift; sourceTree = "<group>"; };
+		8C592BF7222D9E59004887F9 /* LoadingRootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingRootView.swift; sourceTree = "<group>"; };
+		8C592BF9222D9E73004887F9 /* DemoAppDashboardDependencyContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoAppDashboardDependencyContainer.swift; sourceTree = "<group>"; };
+		8C592BFB222D9E88004887F9 /* DashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
+		8C592BFD222D9E91004887F9 /* DashboardUserInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardUserInterface.swift; sourceTree = "<group>"; };
+		8C592BFF222D9EA0004887F9 /* DashboardRootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardRootView.swift; sourceTree = "<group>"; };
+		8C592C02222D9F54004887F9 /* LoadingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingViewModel.swift; sourceTree = "<group>"; };
+		8C592C04222D9FE7004887F9 /* FinishedLoadingResponder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinishedLoadingResponder.swift; sourceTree = "<group>"; };
+		8C592C07222DA233004887F9 /* DashboardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewModel.swift; sourceTree = "<group>"; };
+		8C592C09222DA240004887F9 /* DashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardView.swift; sourceTree = "<group>"; };
 		8C7EB213222474230033293F /* UserSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSession.swift; sourceTree = "<group>"; };
 		8C7EB215222474AF0033293F /* UserProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfile.swift; sourceTree = "<group>"; };
 		8C7EB217222475690033293F /* RemoteUserSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteUserSession.swift; sourceTree = "<group>"; };
@@ -464,10 +466,7 @@
 				8C05B5B62229F56500CEA18E /* RxCocoa.framework in Frameworks */,
 				8C05B5B72229F56500CEA18E /* PromiseKit.framework in Frameworks */,
 				8C05B5B82229F56500CEA18E /* Kingfisher.framework in Frameworks */,
-				8C05B5B92229F56500CEA18E /* RxTest.framework in Frameworks */,
 				8C05B5BA2229F56500CEA18E /* RxSwift.framework in Frameworks */,
-				8C05B5BB2229F56500CEA18E /* RxAtomic.framework in Frameworks */,
-				8C05B5BC2229F56500CEA18E /* RxBlocking.framework in Frameworks */,
 				8C86711122208F780077BB91 /* DemoAppUIKit.framework in Frameworks */,
 				8C8670EE22208F1B0077BB91 /* DemoApp_iOS.framework in Frameworks */,
 				8C86713322208FAF0077BB91 /* DemoAppKit.framework in Frameworks */,
@@ -482,11 +481,8 @@
 				8C592B95222A08FC004887F9 /* DemoAppUIKit.framework in Frameworks */,
 				8C05B5BD2229F58400CEA18E /* Kingfisher.framework in Frameworks */,
 				8C05B5BE2229F58400CEA18E /* PromiseKit.framework in Frameworks */,
-				8C05B5BF2229F58400CEA18E /* RxAtomic.framework in Frameworks */,
-				8C05B5C02229F58400CEA18E /* RxBlocking.framework in Frameworks */,
 				8C05B5C12229F58400CEA18E /* RxCocoa.framework in Frameworks */,
 				8C05B5C22229F58400CEA18E /* RxSwift.framework in Frameworks */,
-				8C05B5C32229F58400CEA18E /* RxTest.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -497,11 +493,8 @@
 				8C592B97222A0903004887F9 /* DemoAppKit.framework in Frameworks */,
 				8C05B5C42229F58B00CEA18E /* Kingfisher.framework in Frameworks */,
 				8C05B5C52229F58B00CEA18E /* PromiseKit.framework in Frameworks */,
-				8C05B5C62229F58B00CEA18E /* RxAtomic.framework in Frameworks */,
-				8C05B5C72229F58B00CEA18E /* RxBlocking.framework in Frameworks */,
 				8C05B5C82229F58B00CEA18E /* RxCocoa.framework in Frameworks */,
 				8C05B5C92229F58B00CEA18E /* RxSwift.framework in Frameworks */,
-				8C05B5CA2229F58B00CEA18E /* RxTest.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -509,13 +502,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8C05B5CB2229F59000CEA18E /* Kingfisher.framework in Frameworks */,
 				8C05B5CC2229F59000CEA18E /* PromiseKit.framework in Frameworks */,
-				8C05B5CD2229F59000CEA18E /* RxAtomic.framework in Frameworks */,
-				8C05B5CE2229F59000CEA18E /* RxBlocking.framework in Frameworks */,
-				8C05B5CF2229F59000CEA18E /* RxCocoa.framework in Frameworks */,
 				8C05B5D02229F59000CEA18E /* RxSwift.framework in Frameworks */,
-				8C05B5D12229F59000CEA18E /* RxTest.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -599,6 +587,43 @@
 				8C592BE5222A0D3C004887F9 /* Benchmarks.xctest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		8C592BF1222D9DE3004887F9 /* Loading */ = {
+			isa = PBXGroup;
+			children = (
+				8C592BF5222D9E4E004887F9 /* LoadingViewController.swift */,
+				8C592BF7222D9E59004887F9 /* LoadingRootView.swift */,
+			);
+			path = Loading;
+			sourceTree = "<group>";
+		};
+		8C592BF2222D9DEB004887F9 /* Dashboard */ = {
+			isa = PBXGroup;
+			children = (
+				8C592BF9222D9E73004887F9 /* DemoAppDashboardDependencyContainer.swift */,
+				8C592BFB222D9E88004887F9 /* DashboardViewController.swift */,
+				8C592BFD222D9E91004887F9 /* DashboardUserInterface.swift */,
+				8C592BFF222D9EA0004887F9 /* DashboardRootView.swift */,
+			);
+			path = Dashboard;
+			sourceTree = "<group>";
+		};
+		8C592C01222D9F46004887F9 /* Loading */ = {
+			isa = PBXGroup;
+			children = (
+				8C592C02222D9F54004887F9 /* LoadingViewModel.swift */,
+			);
+			path = Loading;
+			sourceTree = "<group>";
+		};
+		8C592C06222DA215004887F9 /* Dashboard */ = {
+			isa = PBXGroup;
+			children = (
+				8C592C07222DA233004887F9 /* DashboardViewModel.swift */,
+				8C592C09222DA240004887F9 /* DashboardView.swift */,
+			);
+			path = Dashboard;
 			sourceTree = "<group>";
 		};
 		8C7EB212222473F90033293F /* Model */ = {
@@ -689,6 +714,7 @@
 				8CD9B3222225CB30001BE735 /* LaunchViewController.swift */,
 				8CD9B3292225D0BD001BE735 /* LaunchRootView.swift */,
 				8C9D89C3222731DB00A6A0EC /* MainViewController.swift */,
+				8C592BEE222D9C40004887F9 /* CellIdentifier.swift */,
 				8C86713C2221EAEF0077BB91 /* Onboarding */,
 				8C8671402221EB570077BB91 /* SignedIn */,
 			);
@@ -740,6 +766,8 @@
 				8CD9B34A2225E1BF001BE735 /* DemoAppSignedInDependencyContainer.swift */,
 				8C9D89DF2227441300A6A0EC /* SignedInViewController.swift */,
 				8C9D89E12227441E00A6A0EC /* SignedInRootView.swift */,
+				8C592BF1222D9DE3004887F9 /* Loading */,
+				8C592BF2222D9DEB004887F9 /* Dashboard */,
 				8C8671412221EB900077BB91 /* ViewProfile */,
 			);
 			path = SignedIn;
@@ -859,9 +887,12 @@
 		8C86714C2221EC9C0077BB91 /* SignedIn */ = {
 			isa = PBXGroup;
 			children = (
+				8C592C06222DA215004887F9 /* Dashboard */,
+				8C592C01222D9F46004887F9 /* Loading */,
 				8CD3269C2226120000D10F18 /* SignedInViewModel.swift */,
 				8CD3269E2226131100D10F18 /* SignedInView.swift */,
 				8CD9B3522225EC13001BE735 /* ViewProfile */,
+				8C592C04222D9FE7004887F9 /* FinishedLoadingResponder.swift */,
 			);
 			path = SignedIn;
 			sourceTree = "<group>";
@@ -1410,14 +1441,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				8CD83EDA2225FB8A00D20151 /* DemoAppDependencyContainer.swift in Sources */,
+				8C592BFC222D9E88004887F9 /* DashboardViewController.swift in Sources */,
 				8CD83ED92225FB7C00D20151 /* ProfileContentRootView.swift in Sources */,
+				8C592BFA222D9E73004887F9 /* DemoAppDashboardDependencyContainer.swift in Sources */,
 				8C9D89DA222743E100A6A0EC /* SignUpRootView.swift in Sources */,
 				8C9D89C8222732D900A6A0EC /* DemoAppOnboardingDependencyContainer.swift in Sources */,
 				8CD9B3232225CB30001BE735 /* LaunchViewController.swift in Sources */,
+				8C592BFE222D9E91004887F9 /* DashboardUserInterface.swift in Sources */,
 				8CD9B32A2225D0BD001BE735 /* LaunchRootView.swift in Sources */,
+				8C592BF0222D9CCE004887F9 /* CellIdentifier.swift in Sources */,
+				8C592BF6222D9E4E004887F9 /* LoadingViewController.swift in Sources */,
 				8C9D89DC222743F300A6A0EC /* WelcomeViewController.swift in Sources */,
 				8CD83EDB2225FB9D00D20151 /* SignInViewController.swift in Sources */,
+				8C592C00222D9EA0004887F9 /* DashboardRootView.swift in Sources */,
 				8C9D89D622273C7000A6A0EC /* SignInRootView.swift in Sources */,
+				8C592BF8222D9E59004887F9 /* LoadingRootView.swift in Sources */,
 				8CD9B34F2225EB7C001BE735 /* ProfileContentViewController.swift in Sources */,
 				8C9D89C4222731DB00A6A0EC /* MainViewController.swift in Sources */,
 				8C9D89E22227441E00A6A0EC /* SignedInRootView.swift in Sources */,
@@ -1471,6 +1509,7 @@
 				8CD9B3492225DF7E001BE735 /* FakeURL.swift in Sources */,
 				8CD9B33D2225DA8C001BE735 /* DemoAppUserSessionRepository.swift in Sources */,
 				8CD9B31A2224AF52001BE735 /* NotSignedInResponder.swift in Sources */,
+				8C592C0A222DA240004887F9 /* DashboardView.swift in Sources */,
 				8CD9B31E2225C93C001BE735 /* ErrorMessage.swift in Sources */,
 				8C9D89D22227349B00A6A0EC /* NavigationAction.swift in Sources */,
 				8C9D89CA222733F500A6A0EC /* OnboardingViewModel.swift in Sources */,
@@ -1483,11 +1522,14 @@
 				8CD9B3562225ECBC001BE735 /* DoneWithProfileResponder.swift in Sources */,
 				8C9D89D42227396F00A6A0EC /* SignInViewModel.swift in Sources */,
 				8C7EB214222474230033293F /* UserSession.swift in Sources */,
+				8C592C05222D9FE7004887F9 /* FinishedLoadingResponder.swift in Sources */,
 				8C7EB21B222476330033293F /* UserSessionDataStore.swift in Sources */,
 				8C7EB216222474AF0033293F /* UserProfile.swift in Sources */,
 				8CD9B31322249C4D001BE735 /* MainViewModel.swift in Sources */,
 				8C9D89EC222744D000A6A0EC /* WelcomeViewModel.swift in Sources */,
 				8CD9B3452225DE33001BE735 /* FakeAuthRemoteAPI.swift in Sources */,
+				8C592C03222D9F54004887F9 /* LoadingViewModel.swift in Sources */,
+				8C592C08222DA233004887F9 /* DashboardViewModel.swift in Sources */,
 				8CD9B3402225DC6D001BE735 /* AuthRemoteAPI.swift in Sources */,
 				8CD9B31C2225C6CF001BE735 /* LaunchViewModel.swift in Sources */,
 			);

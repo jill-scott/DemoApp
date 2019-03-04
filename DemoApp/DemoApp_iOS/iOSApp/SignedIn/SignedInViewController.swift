@@ -91,15 +91,15 @@ public class SignedInViewController: NiblessViewController {
     
     func present(_ view: SignedInView) {
         switch view {
-        case .gettingUsersLocation:
-            let viewController = viewControllerFactory.makeGettingUsersLocationViewController()
+        case .loading:
+            let viewController = viewControllerFactory.makeLoadingViewController()
             transition(to: viewController)
-        case .pickMeUp(let pickupLocation):
-            let viewController = viewControllerFactory.makePickMeUpViewController(pickupLocation: pickupLocation)
+        case .dashboard:
+            let viewController = viewControllerFactory.makeDashboardViewController()
             transition(to: viewController)
-        case .waitingForPickup:
-            let viewController = viewControllerFactory.makeWaitingForPickupViewController()
-            transition(to: viewController)
+//        case .waitingForPickup:
+//            let viewController = viewControllerFactory.makeWaitingForPickupViewController()
+//            transition(to: viewController)
         }
     }
     
@@ -117,8 +117,7 @@ public class SignedInViewController: NiblessViewController {
 
 protocol SignedInViewControllerFactory {
     
-    func makeGettingUsersLocationViewController() -> GettingUsersLocationViewController
-    func makePickMeUpViewController(pickupLocation: Location) -> PickMeUpViewController
-    func makeWaitingForPickupViewController() -> WaitingForPickupViewController
+    func makeLoadingViewController() -> LoadingViewController
+    func makeDashboardViewController() -> DashboardViewController
 }
 
