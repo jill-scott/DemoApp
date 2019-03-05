@@ -17,7 +17,7 @@ import RxSwift
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
-    let injectionContainer = KooberAppDependencyContainer()
+    let injectionContainer = DemoAppDependencyContainer()
     var window: UIWindow?
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]?) -> Bool {
@@ -54,4 +54,3 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
 }
-

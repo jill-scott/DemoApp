@@ -9,125 +9,83 @@
 import UIKit
 import DemoAppUIKit
 import DemoAppKit
+import PromiseKit
 import RxSwift
 
-public class SignedInViewController: NiblessViewController {
+public class SignInViewController : NiblessViewController {
     
     // MARK: - Properties
-    // View Model
-    let viewModel: SignedInViewModel
-    
-    // Child View Controllers
-    let profileViewController: ProfileViewController
-    var currentChildViewController: UIViewController?
-    
-    // State
-    let userSession: UserSession
     let disposeBag = DisposeBag()
-    
-    // Factories
-    let viewControllerFactory: SignedInViewControllerFactory
+    let viewModel: SignInViewModel
     
     // MARK: - Methods
-    init(viewModel: SignedInViewModel,
-         userSession: UserSession,
-         profileViewController: ProfileViewController,
-         viewControllerFactory: SignedInViewControllerFactory) {
-        self.viewModel = viewModel
-        self.userSession = userSession
-        self.profileViewController = profileViewController
-        self.viewControllerFactory = viewControllerFactory
+    init(viewModelFactory: SignInViewModelFactory) {
+        self.viewModel = viewModelFactory.makeSignInViewModel()
         super.init()
     }
     
     public override func loadView() {
-        view = SignedInRootView(viewModel: viewModel)
+        self.view = SignInRootView(viewModel: viewModel)
     }
     
     public override func viewDidLoad() {
         super.viewDidLoad()
-        
-        subscribe(to: viewModel.view)
-        bindToShowingProfileState()
+        observeErrorMessages()
     }
     
-    func bindToShowingProfileState() {
+    func observeErrorMessages() {
         viewModel
-            .showingProfileScreen
-            .asDriver(onErrorJustReturn: false)
-            .distinctUntilChanged()
-            .drive(onNext: { [weak self] showingProfileScreen in
-                guard let strongSelf = self else {
-                    return
-                }
-                strongSelf.update(showingProfileScreen: showingProfileScreen)
+            .errorMessages
+            .asDriver { _ in fatalError("Unexpected error from error messages observable.") }
+            .drive(onNext: { [weak self] errorMessage in
+                self?.present(errorMessage: errorMessage)
             })
             .disposed(by: disposeBag)
     }
     
-    func update(showingProfileScreen: Bool) {
-        if showingProfileScreen {
-            if presentedViewController.isEmpty {
-                present(profileViewController, animated: true)
-            }
-        } else {
-            if profileViewController.view.window != nil {
-                dismiss(animated: true)
-            }
-        }
+    public override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        addKeyboardObservers()
     }
     
-    func subscribe(to observable: Observable<SignedInView>) {
-        observable
-            .subscribe(onNext: { [weak self] view in
-                guard let strongSelf = self else {
-                    return
-                }
-                
-                strongSelf.present(view)
-            })
-            .disposed(by: disposeBag)
+    public override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        removeObservers()
     }
     
-    func present(_ view: SignedInView) {
-        switch view {
-        case .loading:
-            let viewController = viewControllerFactory.makeGettingUsersLocationViewController()
-            transition(to: viewController)
-        case .dashboard:
-            let viewController = viewControllerFactory.makePickMeUpViewController
-            transition(to: viewController)
-        }
-    }
-    
-    public override func viewWillLayoutSubviews() {
-        super.viewWillLayoutSubviews()
-        currentChildViewController?.view.frame = view.bounds
-    }
-    
-    func transition(to viewController: UIViewController) {
-        remove(childViewController: currentChildViewController)
-        addFullScreen(childViewController: viewController)
-        currentChildViewController = viewController
+    public override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        (view as! SignInRootView).configureViewAfterLayout()
     }
 }
 
-protocol SignedInViewControllerFactory {
+protocol SignInViewModelFactory {
     
-    func makeGettingUsersLocationViewController() -> GettingUsersLocationViewController
-    func makePickMeUpViewController(pickupLocation: Location) -> PickMeUpViewController
-    func makeWaitingForPickupViewController() -> WaitingForPickupViewController
+    func makeSignInViewModel() -> SignInViewModel
 }
 
-// This should go in the associated next view controller:
-
-extension Optional {
+extension SignInViewController {
     
-    var isEmpty: Bool {
-        return self == nil
+    func addKeyboardObservers() {
+        let notificationCenter = NotificationCenter.default
+        notificationCenter.addObserver(self, selector: #selector(handleContentUnderKeyboard), name: UIResponder.keyboardWillHideNotification, object: nil)
+        notificationCenter.addObserver(self, selector: #selector(handleContentUnderKeyboard), name: UIResponder.keyboardWillChangeFrameNotification, object: nil)
     }
     
-    var exists: Bool {
-        return self != nil
+    func removeObservers() {
+        let notificationCenter = NotificationCenter.default
+        notificationCenter.removeObserver(self)
+    }
+    
+    @objc func handleContentUnderKeyboard(notification: Notification) {
+        if let userInfo = notification.userInfo,
+            let keyboardEndFrame = userInfo[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue {
+            let convertedKeyboardEndFrame = view.convert(keyboardEndFrame.cgRectValue, from: view.window)
+            if notification.name == UIResponder.keyboardWillHideNotification {
+                (view as! SignInRootView).moveContentForDismissedKeyboard()
+            } else {
+                (view as! SignInRootView).moveContent(forKeyboardFrame: convertedKeyboardEndFrame)
+            }
+        }
     }
 }

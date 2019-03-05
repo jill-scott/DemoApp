@@ -27,7 +27,7 @@ public class DemoAppSignedInDependencyContainer {
     // Long-lived dependencies
     let signedInViewModel: SignedInViewModel
     //let imageCache: ImageCache
-    //let locator: Locator
+    let serverDataFinder: ServerDataFinder
     
     // MARK: - Methods
     public init(userSession: UserSession, appDependencyContainer: DemoAppDependencyContainer) {
@@ -37,9 +37,10 @@ public class DemoAppSignedInDependencyContainer {
 //        func makeImageCache() -> ImageCache {
 //            return InBundleImageCache()
 //        }
-//        func makeLocator() -> Locator {
-//            return FakeLocator()
-//        }
+        
+        func makeServerDataFinder() -> ServerDataFinder {
+            return FakeServerDataFinder()
+        }
         
         self.userSessionRepository = appDependencyContainer.sharedUserSessionRepository
         self.mainViewModel = appDependencyContainer.sharedMainViewModel
@@ -48,7 +49,7 @@ public class DemoAppSignedInDependencyContainer {
         
         self.signedInViewModel = makeSignedInViewModel()
         //self.imageCache = makeImageCache()
-        //self.locator = makeLocator()
+        self.serverDataFinder = makeServerDataFinder()
     }
     
     // Signed in
@@ -78,6 +79,23 @@ public class DemoAppSignedInDependencyContainer {
 //        return GettingUsersLocationViewModel(determinedPickUpLocationResponder: signedInViewModel,
 //                                             locator: locator)
 //    }
+    
+    //Loading
+    
+    public func makeLoadingViewController() -> LoadingViewController {
+        return LoadingViewController(viewModelFactory: self)
+    }
+    
+    public func makeLoadingViewModel() -> LoadingViewModel {
+        return LoadingViewModel(finishedLoadingResponder: signedInViewModel, serverDataFinder: serverDataFinder)
+    }
+    
+    // Dashboard
+    
+    public func makeDashboardViewController() -> DashboardViewController {
+        let dashboardDependencyContainer = DemoAppDashboardDependencyContainer(signedInDependencyContainer: self)
+        return dashboardDependencyContainer.makeDashboardViewController()
+    }
     
 //    // Pick-me-up
 //    public func makePickMeUpViewController(pickupLocation: Location) -> PickMeUpViewController {
@@ -115,5 +133,8 @@ public class DemoAppSignedInDependencyContainer {
 }
 
 extension DemoAppSignedInDependencyContainer: SignedInViewControllerFactory {}
+
+extension DemoAppSignedInDependencyContainer: LoadingViewModelFactory {}
+//, DashboardViewModelFactory {}
 
 //extension DemoAppSignedInDependencyContainer: GettingUsersLocationViewModelFactory, WaitingForPickupViewModelFactory {}

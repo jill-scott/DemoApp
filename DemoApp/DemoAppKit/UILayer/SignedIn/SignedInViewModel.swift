@@ -12,7 +12,7 @@ import RxSwift
 //public class SignedInViewModel: DeterminedPickUpLocationResponder,
 //    NewRideRequestAcceptedResponder,
 //    GoToNewRideNavigator,
-public class SignedInViewModel: DoneWithProfileResponder {
+public class SignedInViewModel: DoneWithProfileResponder, FinishedLoadingResponder {
     
     // MARK: - Properties
     public var view: Observable<SignedInView> { return viewSubject.asObservable() }
@@ -43,5 +43,9 @@ public class SignedInViewModel: DoneWithProfileResponder {
     
     public func finishedViewingProfile() {
         showingProfileScreenSubject.onNext(false)
+    }
+    
+    public func finishedLoading(with serverData: ServerData) {
+        viewSubject.onNext(.dashboard)
     }
 }

@@ -17,7 +17,7 @@ public class WelcomeRootView: NiblessView {
     var hierarchyNotReady = true
     
     let appLogoImageView: UIImageView = {
-        let imageView = UIImageView(image: UIImage(named: "roo_logo"))
+        let imageView = UIImageView(image: #imageLiteral(resourceName: "thumbs-up-1327029_1920") )
         imageView.backgroundColor = Color.background
         return imageView
     }()
@@ -25,7 +25,7 @@ public class WelcomeRootView: NiblessView {
     let appNameLabel: UILabel = {
         let label = UILabel()
         label.font = .boldSystemFont(ofSize: 36)
-        label.text = "KOOBER"
+        label.text = "Demo App"
         label.textColor = UIColor.white
         return label
     }()

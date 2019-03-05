@@ -75,4 +75,4 @@ public class DemoAppOnboardingDependencyContainer {
     }
 }
 
-extension DemoAppDependencyContainer: WelcomeViewModelFactory, SignInViewModelFactory, SignUpViewModelFactory {}
+extension DemoAppOnboardingDependencyContainer: WelcomeViewModelFactory, SignInViewModelFactory, SignUpViewModelFactory {}

@@ -12,7 +12,7 @@ import UIKit
 import DemoAppKit
 import RxSwift
 
-class DemoAppDependencyContainer {
+public class DemoAppDependencyContainer {
     
     // MARK: - Properties
     
@@ -22,7 +22,7 @@ class DemoAppDependencyContainer {
     
     // MARK: - Methods
     
-    init() {
+    public init() {
         // The following functions must be placed within the init so we can create our initializers
         // for the class's properties
         
