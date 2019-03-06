@@ -1928,7 +1928,7 @@
 				CLASSPREFIX = RLM;
 				LastSwiftUpdateCheck = 0710;
 				LastTestingUpgradeCheck = 0510;
-				LastUpgradeCheck = 1010;
+				LastUpgradeCheck = 1000;
 				ORGANIZATIONNAME = Realm;
 				TargetAttributes = {
 					3F1A5E711992EB7400F45F4C = {
@@ -2704,6 +2704,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 5D660FBD1BE98BEF0021E04F /* RealmSwift.xcconfig */;
 			buildSettings = {
+				SWIFT_VERSION = 4.2;
 			};
 			name = Debug;
 		};
@@ -2711,6 +2712,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 5D660FBD1BE98BEF0021E04F /* RealmSwift.xcconfig */;
 			buildSettings = {
+				SWIFT_VERSION = 4.2;
 			};
 			name = Release;
 		};
