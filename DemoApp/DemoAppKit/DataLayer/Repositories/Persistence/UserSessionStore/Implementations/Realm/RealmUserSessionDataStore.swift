@@ -25,7 +25,7 @@ public class RealmUserSessionDataStore: UserSessionDataStore {
     
     public func readUserSession() -> Promise<UserSession?> {
         return Promise<UserSession?> { seal in
-            DispatchQueue.global().async {
+            DispatchQueue.main.async {
                 self.readUserSessionSync(seal: seal)
             }
         }
@@ -38,13 +38,14 @@ public class RealmUserSessionDataStore: UserSessionDataStore {
         return self.readUserSession()
             .map { [weak self] _ -> UserSession in
                 self?.realmManager.addOrUpdateRealmObject(object: RealmUser(id: userSession.profile.email, userSession: userSession))
+                debugPrint("Saved User Session")
                 return userSession
         }
     }
     
     public func delete(userSession: UserSession) -> Promise<(UserSession)> {
         return Promise<UserSession> { seal in
-            DispatchQueue.global().async {
+            DispatchQueue.main.async {
                 self.deleteSync(userSession: userSession, seal: seal)
             }
         }

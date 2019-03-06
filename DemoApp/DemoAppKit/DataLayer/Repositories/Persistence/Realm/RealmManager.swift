@@ -35,10 +35,11 @@ public class RealmManager {
     
     func replaceRealmObject(object: RealmObject) {
         let prevObject = realm.objects(RealmObject.self).first(where: { $0.type == object.type })
-        guard let previousValue = prevObject else { return }
         do {
             try realm.write {
-                realm.delete(previousValue)
+                if let previousValue = prevObject {
+                    realm.delete(previousValue)
+                }
                 realm.add(object, update: true)
                 debugPrint("Wrote to realm successfully!")
             }
@@ -62,12 +63,14 @@ public class RealmManager {
     // Delete
     
     func deleteRealmObject(object: RealmObject) {
-        do {
-            try realm.write {
-                realm.delete(object)
+        if let objc = findRealmObject(object: object) {
+            do {
+                try realm.write {
+                    realm.delete(objc)
+                }
+            } catch {
+                debugPrint("Error deleting all realm data: \(error)")
             }
-        } catch {
-            debugPrint("Error deleting all realm data: \(error)")
         }
     }
     
