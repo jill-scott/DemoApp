@@ -10,9 +10,10 @@
   
 ## General Project Setup
 1. clone this repo
-2. cd inboard-ios
-3. pod install
-4. open DemoApp.xcworkspace
+2. Install carthage dependency manager. Instructions at: https://github.com/Carthage/Carthage
+2. cd DemoApp/DemoApp
+3. carthage update
+4. open DemoApp.xcodeproj
   
   # Dependency Managers
   
