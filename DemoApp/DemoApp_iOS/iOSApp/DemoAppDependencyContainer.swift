@@ -10,7 +10,7 @@
 
 import UIKit
 import DemoAppKit
-import RxSwift
+import RealmSwift
 
 public class DemoAppDependencyContainer {
     
@@ -38,8 +38,11 @@ public class DemoAppDependencyContainer {
             return FileUserSessionDataStore()
             
             #else
-            let coder = makeUserSessionCoder()
-            return KeychainUserSessionDataStore(userSessionCoder: coder)
+            //let coder = makeUserSessionCoder()
+            //return KeychainUserSessionDataStore(userSessionCoder: coder)
+            
+            let realm = makeUserSessionRealm()
+            return RealmUserSessionDataStore(realm: realm)
             #endif
         }
         
@@ -49,6 +52,24 @@ public class DemoAppDependencyContainer {
         
         func makeAuthRemoteAPI() -> AuthRemoteAPI {
             return FakeAuthRemoteAPI()
+        }
+        
+        func makeUserSessionRealm() -> Realm {
+            RealmMigration.performRealmMigration()
+            
+            do {
+                guard let identifier = Bundle.main.infoDictionary?["ENVIRONMENT"] as? String else {
+                    fatalError("ENVIRONMENT variable not found.")
+                }
+                
+                var config = Realm.Configuration()
+                config.fileURL = config.fileURL!.deletingLastPathComponent().appendingPathComponent("\(identifier).realm")
+                return try Realm(configuration: config)
+            } catch {
+                debugPrint("Unable to initalize Realm!  Fatal Error!")
+                let nserror = error as NSError
+                fatalError("Unresolved error \(nserror), \(nserror.userInfo)")
+            }
         }
         
         self.sharedUserSessionRepository = makeUserSessionRepository()

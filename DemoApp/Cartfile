@@ -1,4 +1,3 @@
 github "mxcl/PromiseKit"
-github "onevcat/Kingfisher"
 github "ReactiveX/RxSwift"
 github "realm/realm-cocoa"
