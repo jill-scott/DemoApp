@@ -266,3 +266,8 @@ For storyboard text:
 - Line break should be word wrap
 - If content is in code, it should be wrapped with AppStr
 - If content is in storyboard, user runtime attribute should be added
+
+## Sources
+
+- Example source code is based upon the book, https://www.raywenderlich.com/8477-introducing-advanced-ios-app-architecture
+- Using Subjects/Variables - BehaviorSubject has a wrapper that works best for use in the iOS UI called Variable (compile-time guarantees, executes in main thread, etc.). The Variable is going to be deprecated in RxSwift 4.x (see [here](https://medium.com/koolicar-engineering/rxswift-behaviorrelay-over-variable-182865ce10e0 "Deprecated Variable")), and its replacement is BehaviorRelay.
